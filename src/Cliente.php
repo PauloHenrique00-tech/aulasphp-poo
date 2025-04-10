@@ -14,11 +14,19 @@ class Cliente
 
     public function setIdade(int $idade): void 
     {
+        if($idade < 0){
+            throw new InvalidArgumentException("Idade não pode ser negativa");
+        }
+
         $this->idade = $idade;
     }
 
     public function setEmail(string $email): void 
     {
+        if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
+            throw new InvalidArgumentException("E-mail inválido!");
+        }
+
         $this->email = $email;
     }
 
