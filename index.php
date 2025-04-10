@@ -17,44 +17,37 @@ require_once "src/Cliente.php";
 $clienteA = new Cliente();
 $clienteB = new Cliente();
 
-// Atribuindo valores para os atributos
-$clienteA->nome = "Fulano da Silva";
-$clienteA->idade = 30;
-$clienteA->email = "fulano@gmail.com";
+// Inserindo valores para os atributos
+$clienteA->setNome("Fulano da Silva");
+$clienteA->setIdade(30);
+$clienteA->setEmail("fulano@gmail.com");
 
-$clienteB->nome = "Ozzy Osbourne";
-$clienteB->idade = 15;
-$clienteB->email = "ozzy@email.com";
+$clienteB->setNome("Ozzy Osbourne");
+$clienteB->setIdade(15);
+$clienteB->setEmail("ozzy@email.com");
 ?>
 
 <h2>Acessando/lendo os dados dos objetos</h2>
 
-<h3>Cliente A</h3>
-<div>
-    <?=$clienteA->exibirDados()?>
-</div>
-
 <ul>
-    <li><b>Idade:</b> <?=$clienteA->idade?> </li>
-    <li><b>E-mail:</b> <?=$clienteA->email?> </li>
+    <li><b>Nome:</b> <?=$clienteA->getNome()?> </li>
+    <li><b>Idade:</b> <?=$clienteA->getIdade()?> </li>
+    <li><b>E-mail:</b> <?=$clienteA->getEmail()?> </li>
 </ul>
 
-<h3>Cliente B</h3>
-<div>
-    <?=$clienteB->exibirDados()?>
-</div>
 
 <ul>
-    <li><b>Idade:</b> <?=$clienteB->idade?> </li>
-    <li><b>E-mail:</b> <?=$clienteB->email?> </li>
+    <li><b>Nome:</b> <?=$clienteB->getNome()?> </li>
+    <li><b>Idade:</b> <?=$clienteB->getIdade()?> </li>
+    <li><b>E-mail:</b> <?=$clienteB->getEmail()?> </li>
 </ul>
 
 
 <h2>Testes de acesso aos recursos 
 da classe através do objeto</h2>
 
-<pre><?=var_dump($clienteA, $clienteB)?></pre>
 
+<pre><?=var_dump($clienteA, $clienteB)?></pre>
 
 </body>
 </html>
