@@ -1,5 +1,12 @@
 # Exemplos de programação orientada a objetos usando PHP
 
+## 02_encapsulamento-para-visibilidade
+
+- Utilização de diferentes visibilidades (private e public)
+- Controle da forma como os dados são acessados (getters) e modificados (setters)
+- Com esta abordagem, podemos esconder detalhes de implementação da classe
+- Podemos atribuir diferente lógicas de negócio (validações, sanitizações etc)
+
 ## 01_abstracao-usando-classes-atributos-metodos
 
 - Pasta `src` para organização das classes
@@ -20,3 +27,4 @@
     - Atribuição de dados de forma direta aos atributos usando 
     `$nomeObjeto->atributo = valor`           
     - Chamada de métodos através do objeto usando `$nomeObjeto->metodo()`
+
