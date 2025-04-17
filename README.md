@@ -1,6 +1,4 @@
 # Exemplos de programação orientada a objetos usando PHP
-<<<<<<< Updated upstream
-=======
 
 ## 04_heranca-e-enumeracoes
 
@@ -42,4 +40,3 @@
     - Criação dos objetos `$clienteA` e `$clienteB` a partir da classe usando `new Cliente()`
     - Atribuição de dados de forma direta aos atributos usando `$nomeObjeto->atributo = valor`
     - Chamada de métodos através do objeto usando `$nomeObjeto->metodo()`
->>>>>>> Stashed changes
