@@ -6,7 +6,7 @@
     <title>Exemplo 04</title>
 </head>
 <body>
-    <h1>PHP com POO - Exemplo 04</h1>
+    <h1>PHP com POO - Exemplo 05</h1>
     <hr>
 
 <?php
@@ -16,14 +16,17 @@ require_once "src/Models/PessoaFisica.php"; // Subclasse
 require_once "src/Models/PessoaJuridica.php"; // Subclasse
 
 $clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
-$clientePJ = new PessoaJuridica("João Pedro", "joao@tabajara.com", "32.789.555/000-1", 2019, 
-"Corporação Tabajara");
-
-// $clientePJ->setSituacao(Situacao::ATIVO);
+$clientePJ = new PessoaJuridica(
+    "João Pedro", "joao@tabajara.com", "32.789.555/000-1", 2019, 
+    "Corporação Tabajara");
 ?>
+    <h2>Relatórios</h2>
 
-<pre><?=var_dump($clientePF, $clientePJ)?></pre>
+    <h3>PF</h3>
+    <?=$clientePF->relatorio()?>
 
+    <h3>PJ</h3>
+    <?=$clientePJ->relatorio()?>
 
 </body>
 </html>
