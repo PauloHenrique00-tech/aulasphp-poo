@@ -5,6 +5,9 @@
 - Superclasse e subclasse
 - Readequação de propriedades
 - Ajustes nas chamadas de construtor, usando `parent` para acessar construtor da superclasse
+- Uso de enumeração para criar um tipo de dado com valores customizados
+- Alteração de visibilidade para protected em um método de superclasse, permitindo partir da subclasse
+- Organização das pastas e arquivos em `src`
 
 
 ## 03_encapsulamento-e-metodo-construtor
