@@ -5,7 +5,8 @@ class Cliente
     private string $email;
     private Situacao $situacao;
 
-    /* Definindo a situação INATIVO como valor padrão para o parâmetro situação no construtor. */
+    /* Definindo a situação INATIVO como valor padrão 
+    para o parâmetro situacao no construtor. */
     public function __construct(
         string $nome, string $email, Situacao $situacao = Situacao::INATIVO
         )
@@ -19,9 +20,11 @@ class Cliente
         $this->situacao = $situacao;
     }
 
-    private function getSituacao(Situacao $situacao):void {
-        $this->situacao = $situacao;
+    public function getSituacao():Situacao { 
+        return $this->situacao;
     }
+
+
 
     private function setNome(string $nome): void 
     {
