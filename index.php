@@ -18,6 +18,8 @@ require_once "src/PessoaJuridica.php"; // Subclasse
 $clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
 $clientePJ = new PessoaJuridica("João Pedro", "joao@tabajara.com", "32.789.555/000-1", 2019, 
 "Corporação Tabajara");
+
+// $clientePJ->setSituacao(Situacao::ATIVO);
 ?>
 
 <pre><?=var_dump($clientePF, $clientePJ)?></pre>
