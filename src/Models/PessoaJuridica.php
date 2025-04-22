@@ -1,5 +1,7 @@
 <?php 
-class PessoaJuridica extends Cliente {
+/* Classe Final: não permite herança, ou seja, não será possível
+criar uma subclasse que extenda PessoaJuridica */
+final class PessoaJuridica extends Cliente {
     private string $cnpj;
     private int $anoFundacao;
     private string $nomeFantasia;
@@ -21,7 +23,7 @@ class PessoaJuridica extends Cliente {
 
     /* Método polimórfico, ou seja, ele sobreescreve
     o método originalmente criado na Superclasse.
-    Atenção: os métodos devem ter a mesma assiantura (nome, parâmetros e retorno) */
+    Atenção: os métodos devem ter a mesma assinatura (nome, parâmetros e retorno) */
     public function relatorio(): string
     {
         return "<div>"

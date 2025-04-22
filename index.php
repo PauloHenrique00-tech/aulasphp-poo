@@ -19,6 +19,10 @@ $clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
 $clientePJ = new PessoaJuridica(
     "João Pedro", "joao@tabajara.com", "32.789.555/000-1", 2019, 
     "Corporação Tabajara");
+/* Código abaixo dará erro, pois Cliente é uma classe abstrata, portanto, não podemos criar objeto a partir dela. */
+// $clienteGenerico = new Cliente("Fulano", "fulano@gmail.com");
+// var_dump($clienteGenerico);
+
 ?>
     <h2>Relatórios</h2>
 
