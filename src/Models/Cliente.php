@@ -1,6 +1,7 @@
+
 <?php
 /* Classe abstrata: não pode ser instanciada.
-Com isso, será possível criar objetos apenas a partir das sublclasses. */
+Com isso, será possível criar objetos apenas a partir das subclasses. */
 abstract class Cliente
 {
     private string $nome;
@@ -20,12 +21,13 @@ abstract class Cliente
 
     public function relatorio():string {
         return "<div>
-            <h3> {$this->getNome()} </h3>
-            <p> <b>Contato:</b> {$this->getEmail()} </p>
+            <h4> {$this->getNome()} </h4>
+            <p> <b>Contato:</b> {$this->getEmail()}</p>
         </div>";
     }
 
-    /* Visibilidade protegida: desta forma, este método pode ser usado aqui em Cliente (superclasse) e também nas subclasses.
+    /* Visibilidade protegida: desta forma, este método
+    pode ser usado aqui em Cliente (superclasse) e também nas subclasses.
     O acesso externo (no nosso caso, em index) continua sendo bloqueado. */
     protected function setSituacao(Situacao $situacao):void {
         $this->situacao = $situacao;

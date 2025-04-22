@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* Classe Final: não permite herança, ou seja, não será possível
 criar uma subclasse que extenda PessoaJuridica */
 final class PessoaJuridica extends Cliente {
@@ -8,7 +8,6 @@ final class PessoaJuridica extends Cliente {
 
     public function __construct(
         string $nome, string $email, string $cnpj, int $ano, string $nomeFantasia)
-
     {
         parent::__construct($nome, $email);
 
@@ -21,17 +20,18 @@ final class PessoaJuridica extends Cliente {
         $this->setSituacao(Situacao::PENDENTE);
     }
 
-    /* Método polimórfico, ou seja, ele sobreescreve
+    /* Método polimórfico, ou seja, ele sobreescreve 
     o método originalmente criado na Superclasse.
     Atenção: os métodos devem ter a mesma assinatura (nome, parâmetros e retorno) */
     public function relatorio(): string
     {
         return "<div>"
-        . parent:: relatorio() . // opcional
-        "<p><b>Nome Fantasia:</b> {$this->getNomeFantasia()} </p>
-        <p><b>CNPJ:</b> {$this->getCnpj()} </p>
+            . parent::relatorio() . // opcional
+            "<p><b>Nome Fantasia:</b> {$this->getNomeFantasia()} </p>
+            <p><b>CNPJ:</b> {$this->getCnpj()} </p>
         </div>";
-    }        
+    }
+
 
     private function setCnpj(string $cnpj): void {
         $this->cnpj = $cnpj;
@@ -45,7 +45,7 @@ final class PessoaJuridica extends Cliente {
         $this->nomeFantasia = $nome;
     }
 
-    public function getCnpj(): string { return $this->cnpj; }
-    public function getAnoFundacao(): int { return $this->anoFundacao; }
-    public function getNomeFantasia(): string { return $this->nomeFantasia; }
+    public function getCnpj(): string {  return $this->cnpj; }
+    public function getAnoFundacao(): int {  return $this->anoFundacao; }
+    public function getNomeFantasia(): string {  return $this->nomeFantasia; }
 }
