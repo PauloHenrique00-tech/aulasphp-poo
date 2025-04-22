@@ -1,5 +1,10 @@
 # Exemplos de programação orientada a objetos usando PHP
 
+## 05_polimorfismo
+
+- Métodos de mesma assinatura (nome, parâmetros, retorno) mas com comportamentos diferentes
+- [Herança] Indicação de classes abstrata e final
+
 ## 04_heranca-e-enumeracoes
 
 - Superclasse e subclasse
