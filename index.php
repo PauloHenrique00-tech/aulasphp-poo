@@ -23,6 +23,12 @@ $clientePJ = new PessoaJuridica(
 // $clienteGenerico = new Cliente("Fulano", "fulano@gmail.com");
 // var_dump($clienteGenerico);
 
+/* O código abaixo dará erro, pois, não é possível
+ definir/usar uma subclasse que extenda PessoaJuridica (que é uma classe final) */
+ //require_once "src/Models/MEI.php";
+ //$clienteMEI = new MEI("AAA", "a@a.com", "123", 2025, "aaaaAA");
+ //var_dump($clienteMEI);
+
 ?>
     <h2>Relatórios</h2>
 
