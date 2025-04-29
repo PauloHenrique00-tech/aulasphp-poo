@@ -13,6 +13,7 @@
 /* Sempre que trabalharmos com namespaces, será necessário
 especificar através do 'use' quais classes/enums/funções serão
 usadas. */
+use MeuProjeto\Calculadora;
 use MeuProjeto\Models\PessoaFisica;
 use MeuProjeto\Models\PessoaJuridica;
 
@@ -23,16 +24,11 @@ $clientePF = new PessoaFisica("Tiago", "tiago@gmail.com", 30, "123.456.789-00");
 $clientePJ = new PessoaJuridica(
     "João Pedro", "joao@tabajara.com", "32.789.555/000-1", 2019, 
     "Corporação Tabajara");
-/* Código abaixo dará erro, pois Cliente é uma classe abstrata, portanto, não podemos criar objeto a partir dela. */
-// $clienteGenerico = new Cliente("Fulano", "fulano@gmail.com");
-// var_dump($clienteGenerico);
 
-/* O código abaixo dará erro, pois, não é possível
- definir/usar uma subclasse que extenda PessoaJuridica (que é uma classe final) */
- //require_once "src/Models/MEI.php";
- //$clienteMEI = new MEI("AAA", "a@a.com", "123", 2025, "aaaaAA");
- //var_dump($clienteMEI);
 
+/* Acessando um método estático (ou seja, sem passar por um objeto) */    
+$total = Calculadora::somar(10, 5);
+echo $total;
 ?>
     <h2>Relatórios</h2>
 
