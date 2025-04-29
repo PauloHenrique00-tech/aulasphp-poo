@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo 04</title>
+    <title>Exemplo 06</title>
 </head>
 <body>
     <h1>PHP com POO - Exemplo 06</h1>
     <hr>
 
 <?php
+/* Sempre que trabalharmos com namespaces, será necessário
+especificar através do 'use' quais classes/enums/funções serão
+usadas. */
+use MeuProjeto\Models\PessoaFisica;
+use MeuProjeto\Models\PessoaJuridica;
+
 require_once "src/Enums/Situacao.php"; // Enum
 require_once "src/Models/Cliente.php"; // Superclasse
 require_once "src/Models/PessoaFisica.php"; // Subclasse
