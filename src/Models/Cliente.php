@@ -1,7 +1,12 @@
-
 <?php
-/* Classe abstrata: não pode ser instanciada.
-Com isso, será possível criar objetos apenas a partir das subclasses. */
+namespace MeuProjeto\Models;
+
+// Usamos o 'use' para indicar a utilização de outras classes/enums que temos
+use MeuProjeto\Enums\Situacao;
+
+// Usamos o 'use' também para indicar a utilizaçao de classes internas do PHP
+use InvalidArgumentException;
+
 abstract class Cliente
 {
     private string $nome;
@@ -48,7 +53,7 @@ abstract class Cliente
     private function setEmail(string $email): void 
     {
         if( !filter_var($email, FILTER_VALIDATE_EMAIL) ){
-            throw new InvalidArgumentException("E-mail inválido!");
+            throw new \InvalidArgumentException("E-mail inválido!");
         }
 
         $this->email = $email;
