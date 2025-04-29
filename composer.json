@@ -1,0 +1,10 @@
+{
+    "autoload": {
+        "psr-4" :
+        {
+            "MeuProjeto\\" : "src/",
+            "Fornecedores\\" : "src/Fornecedores",
+            "Prestadores\\" : "src/Prestadores" 
+        }
+    }
+}
